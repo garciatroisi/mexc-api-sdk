@@ -4,7 +4,7 @@ tsconfig.json
 
 start.ts
 
-src/*.js
+
 src/*.d.ts
 src/modules/*.js
 src/modules/*.d.ts
