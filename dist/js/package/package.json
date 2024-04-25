@@ -21,7 +21,6 @@
   "license": "ISC",
   "dependencies": {
     "@types/node": "^16.11.10",
-    "dotenv": "^16.4.5",
     "sync-request": "6.1.0"
   },
   "bundledDependencies": [
@@ -62,9 +61,5 @@
         "moduleName": "mexc-sdk"
       }
     }
-  },
-  "bundleDependencies": [
-    "sync-request",
-    "@types/node"
-  ]
+  }
 }

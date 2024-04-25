@@ -1,0 +1,96 @@
+➜  mexc-api-sdk git:(main) ✗ node src/pump.js
+Please enter the symbol: WACME
+Buying WACMEUSDT at market price...
+{
+  symbol: 'WACMEUSDT',
+  orderId: 'C02__410775909314875393015',
+  orderListId: -1,
+  price: '0.039464',
+  origQty: '608.14',
+  type: 'MARKET',
+  side: 'BUY',
+  transactTime: 1713718844494
+}
+608.14
+Selling 202.71333333333334 of WACMEUSDT at market price...
+{
+  symbol: 'WACMEUSDT',
+  orderId: 'C02__410775954302988289015',
+  orderListId: -1,
+  price: '0.035696',
+  origQty: '202.71',
+  type: 'MARKET',
+  side: 'SELL',
+  transactTime: 1713718855220
+}
+[4/21/2024 2:00:55 PM] selling 20s
+[4/21/2024 2:01:14 PM] selling 40s
+Selling 202.71333333333334 of WACMEUSDT at market price...
+{
+  symbol: 'WACMEUSDT',
+  orderId: 'C02__410776164685082625015',
+  orderListId: -1,
+  price: '0.04',
+  origQty: '202.71',
+  type: 'MARKET',
+  side: 'SELL',
+  transactTime: 1713718905379
+}
+[4/21/2024 2:01:45 PM] selling 60s
+➜  mexc-api-sdk git:(main) ✗ node src/pump.js
+Please enter the symbol: WACME
+
+Selling 0 of WACMEUSDT at market price...
+{
+  symbol: 'WACMEUSDT',
+  orderId: 'C02__410776493304606747015',
+  orderListId: -1,
+  price: '0.04237',
+  origQty: '202.72',
+  type: 'MARKET',
+  side: 'SELL',
+  transactTime: 1713718983728
+}
+[4/21/2024 2:03:03 PM] selling 20s
+[4/21/2024 2:03:22 PM] selling 40s
+Selling 0 of WACMEUSDT at market price...
+/Users/tsb-uy-hw0006/Code/Web3/mexc_trading/mexc-api-sdk/dist/js/package/node_modules/http-response-object/lib/index.js:51
+            throw err;
+            ^
+
+Error: Server responded to https://api.mexc.com/api/v3/order?quantity=202.72&recvWindow=10000&symbol=WACMEUSDT&side=SELL&type=MARKET&timestamp=1713719032798&signature=1aae94a654a411a270f5906b356c6c5bac5b2fe373c65918b31d6fc2e256a840 with status code 400:
+{"msg":"The minimum transaction volume cannot be less than：5USDT","code":30002,"_extend":{"quantity":"5USDT"}}
+    at Response.getBody (/Users/tsb-uy-hw0006/Code/Web3/mexc_trading/mexc-api-sdk/dist/js/package/node_modules/http-response-object/lib/index.js:41:23)
+    at Spot.newOrder (/Users/tsb-uy-hw0006/Code/Web3/mexc_trading/mexc-api-sdk/dist/js/package/src/modules/trade.js:50:40)
+    at sell (/Users/tsb-uy-hw0006/Code/Web3/mexc_trading/mexc-api-sdk/src/pump.js:32:26)
+    at Timeout._onTimeout (/Users/tsb-uy-hw0006/Code/Web3/mexc_trading/mexc-api-sdk/src/pump.js:67:7)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) {
+  statusCode: 400,
+  headers: {
+    'content-type': 'application/json',
+    'content-length': '112',
+    expires: 'Sun, 21 Apr 2024 17:03:53 GMT',
+    'cache-control': 'max-age=0, no-cache, no-store',
+    pragma: 'no-cache',
+    date: 'Sun, 21 Apr 2024 17:03:53 GMT',
+    connection: 'close',
+    'server-timing': 'cdn-cache; desc=MISS, edge; dur=6, origin; dur=176, ak_p; desc="1713719033311_388787877_1082074419_18247_2481_1_188_-";dur=1',
+    'access-control-expose-headers': 'x-cache',
+    'x-cache': 'NotCacheable from child',
+    'akamai-grn': '0.a56e2c17.1713719033.407f2533'
+  },
+  body: Buffer(112) [Uint8Array] [
+    123,  34, 109, 115, 103,  34,  58,  34,  84, 104, 101,  32,
+    109, 105, 110, 105, 109, 117, 109,  32, 116, 114,  97, 110,
+    115,  97,  99, 116, 105, 111, 110,  32, 118, 111, 108, 117,
+    109, 101,  32,  99,  97, 110, 110, 111, 116,  32,  98, 101,
+     32, 108, 101, 115, 115,  32, 116, 104,  97, 110, 239, 188,
+    154,  53,  85,  83,  68,  84,  34,  44,  34,  99, 111, 100,
+    101,  34,  58,  51,  48,  48,  48,  50,  44,  34,  95, 101,
+    120, 116, 101, 110, 100,  34,  58, 123,  34, 113, 117,  97,
+    110, 116, 105, 116,
+    ... 12 more items
+  ],
+  url: 'https://api.mexc.com/api/v3/order?quantity=202.72&recvWindow=10000&symbol=WACMEUSDT&side=SELL&type=MARKET&timestamp=1713719032798&signature=1aae94a654a411a270f5906b356c6c5bac5b2fe373c65918b31d6fc2e256a840'
+}
